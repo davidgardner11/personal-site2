@@ -52,9 +52,17 @@ SQLite
 5. Now, to update the `home.blade.php` page by pasting all of the content inside the temp.html file "main" section between the "x-layout" tags [Timestamp 26:00]
 6. Commit to GitHub. [Timestamp 26:10]
 
-### Step 5: Make site dynamic 
-1. Modify `home.blade.php` with my name and a greeting. (see updated file)
-2. Commit to GitHub. [Timestamp 28:50] 
+### Step 5: Make the site dynamic 
+1. Start by modifying `home.blade.php` with my name and a greeting. (see updated file)
+2. Commit to GitHub. [Timestamp 28:50]
+3. Now, switch to using a Controller instead of a View. Follow the tutorial instructions at [Timestamp 28:45] 
+4. On the zsh terminal, run: `php artisan make:controller Pages/HomeController --invokable --pest` [Timestamp 29:30]
+5. Change '/' route to a get request in `web.php`. 
+6. Make changes to the `HomeController.php` file [Timestamp 31:03]. Make sure to add `use Illuminate\Contracts\Views\View` and remove `extends Controller` from HomeController class
+7. Update `home.blade.php` file by replacing static info with {{ $message }} 
+6. View site to confirm variables are passed correctly. Then commit to GitHub [Timestamp 31:40]
+
+
 
 
 

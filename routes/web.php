@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
+use App\Http\Controllers\Pages\HomeController;
 use Illuminate\Support\Facades\Route;
 
-Route::view('/', 'pages.home')->name('home');
+Route::get('/', HomeController::class)->name('home');
 Route::view('about', 'pages.about')->name('about');
 Route::view('blog', 'pages.blog')->name('blog');
