@@ -93,19 +93,20 @@ SQLite
 16. Commit to GitHub [Timestamp 55:30]
 
 ### Step 8: Set up routing for blog posts
-1. Make sure to repopulate the database tables using Tinker. Repeat step 7.9
-2. Now, create a new route to blog post. Edit `web.app` according to instructions at [Timestamp 56:10]
-3. Crate controller by running: `php artisan make:controller Pages/Blog/ShowController --invokable --pest`  
+1. Make sure to repopulate the blog_posts_table with "fake" data using Tinker. Repeat step 7.9
+2. Now, create a new route to the bew blog post page. Edit `web.app` according to instructions at [Timestamp 56:10]
+3. Create controller by running: `php artisan make:controller Pages/Blog/ShowController --invokable --pest`  
 4. Update `/app/Http/Controllers/Pages/Blog/ShowController.php` as shown at [Timestamp 57:30]
 5. Update blog post href on `home.blade.php` as shown at [Timestamp 57:57]. 
 6. Test by clicking a blog post. Redirects to a blog route depending on the $id. [Timestamp 58:05]. 
 7. Commit to GitHub [Timestamp 58:15]
 8. More updates to `ShowController.php` as shown at [Timestamp 1:00:10]
-
-... stuck getting teh HTML for the `show.blade.php` page to work. I used this https://flowbite.com/blocks/publisher/blog-templates/ template, but I think its a bit too compliated. 
-Search the site for a simpler "article" page 
-
-Committing to github now..
+9. First, create a new directory named `blog` underneath `/resources/views/pages/`, and then create the new blog view (e.g. page), `show.blade.php` [Timestamp 1:00:15]
+10. Then, between the x-layout tags, cut-and-paste the HTML from the 1st free example here: https://flowbite.com/blocks/marketing/content/  
+11. Update replace the values in the H1 and p (content) tags with $blogpost->title and $blogpost->content, respectively
+12. Finally, clean up unnecessary parts of the 'show" page.
+13. Done! You've created a blog post page and implemented the routing to it.
+14. Committing to github. [Timestamp 1:20:00]
 
 
 
