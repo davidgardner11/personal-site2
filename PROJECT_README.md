@@ -62,7 +62,7 @@ SQLite
 7. Update `home.blade.php` file by replacing static info with {{ $message }} 
 8. View site to confirm variables are passed correctly. Commit to GitHub [Timestamp 31:40]
 
-### Step 6: Set up testing
+### Step 6: Set up unit testing
 1. Add .gitkeep to both folders
 2. Delete `ExampleTest.php` files from `/tests/Feature` and `/tests/Unit` folders
 3. Update the `/tests/Feature/Http/Controllers/Pages/HomeControllerTest.php` file as shown starting at [Timestamp 32:25]
@@ -73,7 +73,27 @@ SQLite
 8. Run `php artisan test` from terminal again to run unit tests. Hopefully 2 tests pass. 
 9. Add another `it` method to do testing as shown at [Timestamp 35:33]
 10. Run `php artisan test` from terminal again to run unit tests. Hopefully 3 tests pass. 
-11. View site to confirm it is still working correctly. Commit to GitHub [36:00]
+11. View site to confirm it is still working correctly. Commit to GitHub [Timestamp 36:00]
+
+### Step 7: Persist blog posts with Eloquent ORM and SQLite database. Expose to "Migration" 
+1. Setup "model" e.g. "table" starting at [Timestamp 37:00]
+2. on zsh terminal, run: `php artisan make:model BlogPost -mf` [Timestamp 37:40]. (I change the model name from "Post" to "BlogPost", thus affecting the table name )
+3. open the newly created `..._create_blog_posts_table.php` and make changes shown starting at [Timestamp 39:00]
+4. and also changes to `BlogPostFactory.php` and `BlogPost.php`
+5. Update `.env` file to confirm `DB_CONNECTION=sqlite` .  Change `APP_NAME` to "David's Site"
+6. in zsh termianl run: `php artisan migrate` to migrate the tables into the SQLite database  [Timestamp 46:20]
+7. Using database client, open SQLite file. [Timestamp 46:45].  C
+8. Using database client, confirm "blog_posts" table exists.
+9. To open the Tinker tool, type `php artisan tinker`.  Then enter `App\Models\BlogPost::factory()->count(20)->create()` to populate the blog_posts table with 20 rows. Hit Ctrl+C to exit Tinker.
+10. Using database client, confirm "blog_posts" table is populated with 20 new rows.
+11. Now, time to incorporate the blog post content from the database into `home.blade.php` [Timestamp 48:15]
+12. Copy the free blog post component from https://flowbite.com/blocks/marketing/blog/, and paste it below the "hero" section in the new "blog" section
+13. Make updates to the `HomeController.php` file as shown at  [Timestamp 49:45]. 
+14. Also, update the `home.blade.php` file by wrapping an "article" in the blog posts section with a @forelse loop. The @forelse loop ensures the loop doesn't error out if there is no data from the database table. Clear out the databas tables with: `php artisan migrate:fresh` command [Timestamp 51:58]
+16. Commit to GitHub [Timestamp 55:30]
+17. Now, time for some route updates
+
+
 
 
 
