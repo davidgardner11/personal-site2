@@ -32,7 +32,10 @@ SQLite
 8. Open browser to confirm `http://localhost:8000/` is still loading. If so, now npm dev server are vite (javascript build tool) are running. 
 9. Now commit changes to GitHub. [Timestamp 10:20]
 
-### Stage 3: 
+### Stage 3: Focus on routes and resourcs (stylesheets, javascripts, blade views )
+1. Open `/resources/views/welcome.blade.php` and replace all 3 lines below "Styles Section" comment with: `@vite(['resources/css/app.css', 'resources/js/app.js'])`
+2. At this point, I deviated from the tutorial and replaced all of the `welcome.blade.php` "body" content with the "body" content from `temp.html` which was built using header, footer, and hero components from https://flowbite.com/blocks 
+3. Now, reload the site and it looks very different.
 
 
 
