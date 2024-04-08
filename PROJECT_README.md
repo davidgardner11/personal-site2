@@ -60,9 +60,20 @@ SQLite
 5. Change '/' route to a get request in `web.php`. 
 6. Make changes to the `HomeController.php` file [Timestamp 31:03]. Make sure to add `use Illuminate\Contracts\Views\View` and remove `extends Controller` from HomeController class
 7. Update `home.blade.php` file by replacing static info with {{ $message }} 
-6. View site to confirm variables are passed correctly. Then commit to GitHub [Timestamp 31:40]
+8. View site to confirm variables are passed correctly. Commit to GitHub [Timestamp 31:40]
 
-
+### Step 6: Set up testing
+1. Add .gitkeep to both folders
+2. Delete `ExampleTest.php` files from `/tests/Feature` and `/tests/Unit` folders
+3. Update the `/tests/Feature/Http/Controllers/Pages/HomeControllerTest.php` file as shown starting at [Timestamp 32:25]
+4. Replace `test` method with `it` method. Make more changes.
+5. Skip the change where he adds a Status Http package and modifies the `assertStatus(200);` line. Just leave the `200`.
+6. Run `php artisan test` from terminal to run unit tests. It will fail without both `use` lines. Hopefully 1 test passes.
+7. Add another `it` method to do testing as shown at [Timestamp 34:24]
+8. Run `php artisan test` from terminal again to run unit tests. Hopefully 2 tests pass. 
+9. Add another `it` method to do testing as shown at [Timestamp 35:33]
+10. Run `php artisan test` from terminal again to run unit tests. Hopefully 3 tests pass. 
+11. View site to confirm it is still working correctly. Commit to GitHub [36:00]
 
 
 
