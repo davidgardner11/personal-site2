@@ -89,10 +89,17 @@ SQLite
 11. Now, time to incorporate the blog post content from the database into `home.blade.php` [Timestamp 48:15]
 12. Copy the free blog post component from https://flowbite.com/blocks/marketing/blog/, and paste it below the "hero" section in the new "blog" section
 13. Make updates to the `HomeController.php` file as shown at  [Timestamp 49:45]. 
-14. Also, update the `home.blade.php` file by wrapping an "article" in the blog posts section with a @forelse loop. The @forelse loop ensures the loop doesn't error out if there is no data from the database table. Clear out the databas tables with: `php artisan migrate:fresh` command [Timestamp 51:58]
+14. Also, update the `home.blade.php` file by wrapping an "article" in the blog posts section with a @forelse loop. The @forelse loop ensures the loop doesn't error out if there is no data from the database table. Clear out the databasetables with: `php artisan migrate:fresh` command [Timestamp 51:58]
 16. Commit to GitHub [Timestamp 55:30]
-17. Now, time for some route updates
 
+### Step 8: Set up routing for blog posts
+1. Make sure to repopulate the database tables using Tinker. Repeat step 7.9
+2. Now, create a new route to blog post. Edit `web.app` according to instructions at [Timestamp 56:10]
+3. Crate controller by running: `php artisan make:controller Pages/Blog/ShowController --invokable --pest`  
+4. Update `/app/Http/Controllers/Pages/Blog/ShowController.php` as shown at [Timestamp 57:30]
+5. Update blog post href on `home.blade.php` as shown at [Timestamp 57:57]. 
+6. Test by clicking a blog post. Redirects to a blog route depending on the $id. [Timestamp 58:05]. 
+7. Commit to GitHub [Timestamp 58:15]
 
 
 
