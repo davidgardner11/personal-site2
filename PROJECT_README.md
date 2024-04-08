@@ -53,7 +53,8 @@ SQLite
 6. Commit to GitHub. [Timestamp 26:10]
 
 ### Step 5: Make site dynamic 
-
+1. Modify `home.blade.php` with my name and a greeting. (see updated file)
+2. Commit to GitHub. [Timestamp 28:50] 
 
 
 
