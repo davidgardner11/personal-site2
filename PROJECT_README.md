@@ -36,6 +36,16 @@ SQLite
 1. Open `/resources/views/welcome.blade.php` and replace all 3 lines below "Styles Section" comment with: `@vite(['resources/css/app.css', 'resources/js/app.js'])`
 2. At this point, I deviated from the tutorial and replaced all of the `welcome.blade.php` "body" content with the "body" content from `temp.html` which was built using header, footer, and hero components from https://flowbite.com/blocks 
 3. Now, reload the site and it looks very different.
+4. Commit changes to GitHub [Timestamp 12:05]
+5. Next, switch from using layouts to components. Start by creating `/components` and `/pages` folders underneath `resources/views/`. 
+6. Add a `layout.blade.php` file to the `/components` folder and copy all content from `welcome.blade.php` into `layout.blade.php`
+7. Replace all of the content in `welcome.blade.php` with this: x-layout tag. p-tag you can't see me. endp-tag. endx-layout-tag
+8. update `web.php` file. See [Timestamp 16:20]
+9. Add a `home.blade.php` file to the `/pages` folder and copy all content from `welcome.blade.php` into `home.blade.php`. Delete `welcome.blade.php`. Site will be broken temporarily.
+10. Now update the route in `web.php` like this `Route::view('/', 'pages.home')->name('home');` Site should be working again. [Timestamp 17:45]
+
+
+
 
 
 
