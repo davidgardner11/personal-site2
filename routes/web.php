@@ -11,7 +11,7 @@ Route::view('about', 'pages.about')->name('about');
 Route::view('blog', 'pages.blog')->name('blog');
 
 Route::get(
-    'blog/{post}',
+    'blog/{blogpost}',
     ShowController::class
     
 )->name('blog:show');

@@ -100,6 +100,13 @@ SQLite
 5. Update blog post href on `home.blade.php` as shown at [Timestamp 57:57]. 
 6. Test by clicking a blog post. Redirects to a blog route depending on the $id. [Timestamp 58:05]. 
 7. Commit to GitHub [Timestamp 58:15]
+8. More updates to `ShowController.php` as shown at [Timestamp 1:00:10]
+
+... stuck getting teh HTML for the `show.blade.php` page to work. I used this https://flowbite.com/blocks/publisher/blog-templates/ template, but I think its a bit too compliated. 
+Search the site for a simpler "article" page 
+
+Committing to github now..
+
 
 
 
