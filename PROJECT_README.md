@@ -77,12 +77,12 @@ SQLite
 
 ### Step 7: Persist blog posts with Eloquent ORM and SQLite database. Expose to "Migration" 
 1. Setup "model" e.g. "table" starting at [Timestamp 37:00]
-2. on zsh terminal, run: `php artisan make:model BlogPost -mf` [Timestamp 37:40]. (I change the model name from "Post" to "BlogPost", thus affecting the table name )
+2. on zsh terminal, run: `php artisan make:model BlogPost -mf` [Timestamp 37:40]. Note: I changed model name from "Post" to "BlogPost", thus affeting the generated table name. Keep in mind during tutorial
 3. open the newly created `..._create_blog_posts_table.php` and make changes shown starting at [Timestamp 39:00]
 4. and also changes to `BlogPostFactory.php` and `BlogPost.php`
 5. Update `.env` file to confirm `DB_CONNECTION=sqlite` .  Change `APP_NAME` to "David's Site"
 6. in zsh termianl run: `php artisan migrate` to migrate the tables into the SQLite database  [Timestamp 46:20]
-7. Using database client, open SQLite file. [Timestamp 46:45].  C
+7. Using database client, open SQLite file. [Timestamp 46:45]. 
 8. Using database client, confirm "blog_posts" table exists.
 9. To open the Tinker tool, type `php artisan tinker`.  Then enter `App\Models\BlogPost::factory()->count(20)->create()` to populate the blog_posts table with 20 rows. Hit Ctrl+C to exit Tinker.
 10. Using database client, confirm "blog_posts" table is populated with 20 new rows.
@@ -108,12 +108,10 @@ SQLite
 13. Done! You've created a blog post page and implemented the routing to it.
 14. Committing to github. [Timestamp 1:20:00]
 
-
-
-
-
-
-
-
-
-
+### Step 9: Add unit tests  ShowCOntroller, wrap up
+1. Follow instructions starting at [Timestamp 1:02:55] to create unit tests in `ShowControllerTest.php` 
+2. Summary of unit tests at [Timestamp 1:08:06]
+3. Review models and factories [Timestamp 1:08:30]
+4. Add a new column "published" (boolean). Run `php artisan make:migration alter_blog_posts_add_published --table=blog_posts` and follow instructions [Timestamp 1:09:30]
+5. Update all the files to handle this new column
+7. That's it! All done! Committing final updates to GitHub. App works fine as does `php artisan test` . [Timestamp 1:17:30] 

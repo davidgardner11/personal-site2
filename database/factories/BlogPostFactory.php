@@ -16,6 +16,7 @@ final class BlogPostFactory extends Factory
         return [
             'title' => $this->faker->sentence(),  // faker is part of the unit test framework passing latin text as test values
             'content' => $this->faker->paragraph(),
+            'published' => $this->faker->boolean(),
         ];
     }
 }

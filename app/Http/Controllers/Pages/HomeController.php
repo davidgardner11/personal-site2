@@ -16,6 +16,7 @@ final class HomeController
         return view('pages.home', [
             'message' => 'I created this site with PHP and Laravel',
             'blogposts' => BlogPost::query()
+//                ->where('published', true)
                 ->latest()
                 ->limit(6)
                 ->get(),
