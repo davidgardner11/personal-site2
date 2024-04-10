@@ -2,15 +2,15 @@
 This PROJECT_README contains notes, comments, source links, etc. used while buiding this personal website project with PHP and Laravel. 
 
 ## Development Environment
-MacBook Air
-MacOS Sonoma 14.4
-VSCode 1.88.0 (Universal)
-PHP 8.3.4
-Laravel Installer 5.7.0
-SQLite
+- MacBook Air 2023 / 16GB 
+- MacOS Sonoma 14.4
+- VSCode 1.88.0 (Universal)
+- PHP 8.3.4
+- Laravel Installer 5.7.0
+- SQLite
 
 
-## Steps (and substeps)
+## Steps (and sub steps)
 ### Step 1: Setup the project
 1. Create a grandparent directory for the project: `mkdir website-tutorial-laravelnews`. Open this new directory using VSCode.
 2. Create a README.md file in the parent directory for capturing notes, etc. That's this file.    
@@ -89,7 +89,7 @@ SQLite
 11. Now, time to incorporate the blog post content from the database into `home.blade.php` [Timestamp 48:15]
 12. Copy the free blog post component from https://flowbite.com/blocks/marketing/blog/, and paste it below the "hero" section in the new "blog" section
 13. Make updates to the `HomeController.php` file as shown at  [Timestamp 49:45]. 
-14. Also, update the `home.blade.php` file by wrapping an "article" in the blog posts section with a @forelse loop. The @forelse loop ensures the loop doesn't error out if there is no data from the database table. Clear out the databasetables with: `php artisan migrate:fresh` command [Timestamp 51:58]
+14. Also, update the `home.blade.php` file by wrapping an "article" in the blog posts section with a @forelse loop. The @forelse loop ensures the loop doesn't error out if there is no data from the database table. Clear out the database tables with: `php artisan migrate:fresh` command [Timestamp 51:58]
 16. Commit to GitHub [Timestamp 55:30]
 
 ### Step 8: Set up routing for blog posts
@@ -108,10 +108,10 @@ SQLite
 13. Done! You've created a blog post page and implemented the routing to it.
 14. Committing to github. [Timestamp 1:20:00]
 
-### Step 9: Add unit tests  ShowCOntroller, wrap up
+### Step 9: Add unit tests to ShowCOntroller, wrap up
 1. Follow instructions starting at [Timestamp 1:02:55] to create unit tests in `ShowControllerTest.php` 
 2. Summary of unit tests at [Timestamp 1:08:06]
 3. Review models and factories [Timestamp 1:08:30]
 4. Add a new column "published" (boolean). Run `php artisan make:migration alter_blog_posts_add_published --table=blog_posts` and follow instructions [Timestamp 1:09:30]
 5. Update all the files to handle this new column
-7. That's it! All done! Committing final updates to GitHub. App works fine as does `php artisan test` . [Timestamp 1:17:30] 
+7. That's it! All done! Committing final updates to GitHub. The app runs just fine, as does `php artisan test` [Timestamp 1:17:30] 
