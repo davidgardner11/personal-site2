@@ -2,7 +2,7 @@
 This PROJECT_README contains notes, comments, source links, etc. used while buiding this personal website project with PHP and Laravel. 
 
 ## Development Environment
-- MacBook Air 2023 / 16GB 
+- MacBook Air 2023 / 16GB  
 - MacOS Sonoma 14.4
 - VSCode 1.88.0 (Universal)
 - PHP 8.3.4
